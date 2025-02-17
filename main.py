@@ -21,10 +21,11 @@ class VoiceChatBot:
             if text is None:
                 continue
 
-            if not self.logic.process_request(text):
+            area_requested = self.logic.process_request(text)   
+            if not area_requested:
                 continue
 
-            self.voice_chat.speak(f"¿Está seguro de que desea pasar con el área de {text}? Responda sí o no.")
+            self.voice_chat.speak(f"¿Está seguro de que desea pasar con el área de {area_requested}? Responda sí o no.")
             audio = self.voice_chat.listen()
             confirm_text = self.voice_chat.recognize_audio(audio)
             if confirm_text is None:

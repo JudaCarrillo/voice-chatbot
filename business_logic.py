@@ -35,4 +35,4 @@ class BusinessLogic:
             self.voice_chat.speak("No se reconoció la opción, por favor intente de nuevo")
             return False
 
-        return True
+        return requested_area

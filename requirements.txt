@@ -2,4 +2,4 @@ SpeechRecognition
 pyttsx3
 PyAudio
 gTTS
-playsound
+playsound==1.2.2 # lts version for windows
